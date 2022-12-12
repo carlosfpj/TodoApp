@@ -1,13 +1,16 @@
 import React from "react";
 import "./CreateTodoButton.css";
 
-const elclick = (msg)=> console.log("aqui hubo un click");
 
-function CreateTodoButton () {
+function CreateTodoButton ({openModal, setOpenModal}) {
+  const onClickButton = () => {
+    setOpenModal(!openModal);
+  };
+
   return (
     <button
       className="CreateTodoButton"
-      onClick={elclick}
+      onClick={onClickButton}
       >+</button>
   )
 }
